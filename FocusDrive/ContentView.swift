@@ -27,7 +27,7 @@ struct ContentView: View {
                   // Display live coordinates
                     Text("Position:\(carLatitude)")
                     Text("Position:\(carLongitude)")
-                    Text("Progress:\(progress)")
+                    Text("**Progress**: \(progress)")
                      
               }
               .padding()
