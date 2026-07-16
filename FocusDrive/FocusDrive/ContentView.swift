@@ -6,20 +6,22 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
     @State var progress: Double = 0.0
     @State var carLatitude: Double = 37.7759
     @State var carLongitude: Double = -122.4192
-    
+    @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 37.7759, longitude: -122.4192),
+        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)))
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Map(position: $cameraPosition)
+
         }
-        .padding()
+    
     }
 }
 
