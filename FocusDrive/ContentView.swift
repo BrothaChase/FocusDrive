@@ -19,9 +19,15 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Map(position: $cameraPosition)
-
+            
+          VStack {
+            // Display live coordinates
+              Text("Position:\(carLatitude)")
+              Text("Position:\(carLongitude)")
+              Text("Progress:\(progress)")
+            }
         }
-    
+        
     }
 }
 

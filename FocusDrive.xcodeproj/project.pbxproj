@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		2A27A7023008795F00107F7A /* FocusDrive.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FocusDrive.xcodeproj; sourceTree = "<group>"; };
 		2A89BA28300854AB0038F605 /* FocusDrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusDrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -27,6 +28,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A27A7033008795F00107F7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2A89BA1F300854AB0038F605 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +99,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2A89BA29300854AB0038F605 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2A27A7033008795F00107F7A /* Products */;
+					ProjectRef = 2A27A7023008795F00107F7A /* FocusDrive.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2A89BA27300854AB0038F605 /* FocusDrive */,

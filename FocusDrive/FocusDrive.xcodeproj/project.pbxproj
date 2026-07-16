@@ -10,14 +10,6 @@
 		2A89BA28300854AB0038F605 /* FocusDrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusDrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		2A89BA2A300854AB0038F605 /* FocusDrive */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FocusDrive;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		2A89BA25300854AB0038F605 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -30,7 +22,6 @@
 		2A89BA1F300854AB0038F605 = {
 			isa = PBXGroup;
 			children = (
-				2A89BA2A300854AB0038F605 /* FocusDrive */,
 				2A89BA29300854AB0038F605 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,9 +46,6 @@
 				2A89BA26300854AB0038F605 /* Resources */,
 			);
 			buildRules = (
-			);
-			fileSystemSynchronizedGroups = (
-				2A89BA2A300854AB0038F605 /* FocusDrive */,
 			);
 			name = FocusDrive;
 			productName = FocusDrive;
