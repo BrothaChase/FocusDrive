@@ -25,6 +25,7 @@ struct ContentView: View {
               Text("Position:\(carLatitude)")
               Text("Position:\(carLongitude)")
               Text("Progress:\(progress)")
+              Spacer()
             }
         }
         
