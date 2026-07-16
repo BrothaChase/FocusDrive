@@ -12,6 +12,8 @@ struct ContentView: View {
     @State var progress: Double = 0.0
     @State var carLatitude: Double = 37.7759
     @State var carLongitude: Double = -122.4192
+   
+    // add camera position
     @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.7759, longitude: -122.4192),
         span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)))
@@ -21,12 +23,23 @@ struct ContentView: View {
             Map(position: $cameraPosition)
             
           VStack {
-            // Display live coordinates
-              Text("Position:\(carLatitude)")
-              Text("Position:\(carLongitude)")
-              Text("Progress:\(progress)")
-              Spacer()
+              VStack {
+                  // Display live coordinates
+                    Text("Position:\(carLatitude)")
+                    Text("Position:\(carLongitude)")
+                    Text("Progress:\(progress)")
+                     
+              }
+              .padding()
+              .background(.ultraThinMaterial)
+              .clipShape(RoundedRectangle(cornerRadius:100))
+             
+              Spacer() // push text towards top
+             
+              
+              
             }
+          
         }
         
     }
