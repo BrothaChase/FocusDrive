@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var progress: Double = 0.0
     @State var carLatitude: Double = 37.7759
-    @State var carLongitude: Double = -122.4191
+    @State var carLongitude: Double = -122.4192
     
     var body: some View {
         VStack {
