@@ -24,9 +24,10 @@ struct ContentView: View {
             
           VStack {
               VStack {
+                  
                   // Display live coordinates
-                    Text("Position:\(carLatitude)")
-                    Text("Position:\(carLongitude)")
+                    Text("**Position**:\(carLatitude)")
+                    Text("**Position**:\(carLongitude)")
                     Text("**Progress**: \(progress)")
                      
               }
@@ -35,10 +36,26 @@ struct ContentView: View {
               .clipShape(RoundedRectangle(cornerRadius:100))
              
               Spacer() // push text towards top
-             
-              
               
             }
+            VStack {
+                Image(systemName: "pause.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                Image(systemName: "car.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                Image(systemName: "rectangle.landscape.rotate").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            
+           
+           
+            VStack {
+                Image(systemName: "point.topleft.down.to.point.bottomright.filled.curvepath").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                Image(systemName: "location.north.line.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                Image(systemName: "map.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                Image(systemName: "steeringwheel").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+               
+            }
+            .frame(maxWidth: .infinity, alignment: .trailing)
+          .padding()
           
         }
         
@@ -48,3 +65,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
