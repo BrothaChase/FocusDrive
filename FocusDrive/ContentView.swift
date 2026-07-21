@@ -8,6 +8,23 @@
 import SwiftUI
 import MapKit
 
+
+struct MapIconButton: View {
+    let systemName: String
+    
+    // placeholder for logic when a button is pressed
+    let action : () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: systemName)
+                .padding(10)
+                .background(.ultraThinMaterial)
+                .clipShape(Circle())
+        }
+    }
+}
+
 struct ContentView: View {
     @State var progress: Double = 0.0
     @State var carLatitude: Double = 37.7759
@@ -18,6 +35,7 @@ struct ContentView: View {
     @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.7759, longitude: -122.4192),
         span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)))
+    
 
     var body: some View {
         ZStack {
@@ -40,40 +58,25 @@ struct ContentView: View {
               
             }
             
+            // left buttons
             VStack {
-                Button(
-                    action: {
-                        print("Clicked Button")
-                        
-                    },
-                    label: {
-                        Image(systemName: "pause.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                    }
-                )
-                .buttonStyle(.plain)
+                MapIconButton(systemName: "pause.fill") {
+                    print("Paused Trip")
+                }
+              
                 
-                Button(
-                    action: {
-                        print("Clicked Button")
-                        
-                    },
-                    label: {
-                        Image(systemName: "car.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                    }
-                )
-                .buttonStyle(.plain)
+                MapIconButton(systemName: "car.fill") {
+                    print("Clicked Button")
+                }
+               
+    
+                MapIconButton(systemName: "rectangle.landscape.rotate") {
+                    print("Rotated Orientation")
+                }
                 
-                Button(
-                    action: {
-                        print("Clicked Button")
-                        
-                    },
-                    label: {
-                        Image(systemName: "rectangle.landscape.rotate").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                    }
-                )
-                .buttonStyle(.plain)
+
             }
+            .buttonStyle(.plain)
             .font(.system(size: 15, weight: .bold))
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(10)
@@ -81,51 +84,27 @@ struct ContentView: View {
            
            
             VStack {
-                Button(
-                    action: {
-                        print("Clicked Button")
-                        
-                    },
-                    label: {
-                        Image(systemName: "point.topleft.down.to.point.bottomright.filled.curvepath").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                    }
-                )
-                .buttonStyle(.plain)
+                MapIconButton(systemName: "point.topleft.down.to.point.bottomright.filled.curvepath") {
+                    print("Showing Route")
+                }
                 
-                Button(
-                    action: {
-                        print("Clicked Button")
-                        
-                    },
-                    label: {
-                        Image(systemName: "location.north.line.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                    }
-                )
-                .buttonStyle(.plain)
-                Button(
-                    action: {
-                        print("Clicked Button")
-                        
-                    },
-                    label: {
-                        Image(systemName: "map.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                    }
-                )
-                .buttonStyle(.plain)
-                Button(
-                    action: {
-                        print("Clicked Button")
-                        
-                    },
-                    label: {
-                        Image(systemName: "steeringwheel").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                    }
-                )
-                .buttonStyle(.plain)
-            }
+                MapIconButton(systemName: "location.north.line.fill") {
+                    print("Showing Route")
+                }
+                
+                MapIconButton(systemName: "map.fill") {
+                    print("Showing Route")
+                }
+                
+                MapIconButton(systemName: "steeringwheel") {
+                    print("Showing Route")
+                }
+                
+              }
+            .buttonStyle(.plain)
             .font(.system(size: 15, weight: .bold))
             .frame(maxWidth: .infinity, alignment: .trailing)
-          .padding(10)
+            .padding(10)
           
         }
         
