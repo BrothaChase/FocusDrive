@@ -39,6 +39,7 @@ struct ContentView: View {
               Spacer() // push text towards top
               
             }
+            
             VStack {
                 Button(
                     action: {
@@ -80,11 +81,47 @@ struct ContentView: View {
            
            
             VStack {
-                Image(systemName: "point.topleft.down.to.point.bottomright.filled.curvepath").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                Image(systemName: "location.north.line.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                Image(systemName: "map.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                Image(systemName: "steeringwheel").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-               
+                Button(
+                    action: {
+                        print("Clicked Button")
+                        
+                    },
+                    label: {
+                        Image(systemName: "point.topleft.down.to.point.bottomright.filled.curvepath").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                    }
+                )
+                .buttonStyle(.plain)
+                
+                Button(
+                    action: {
+                        print("Clicked Button")
+                        
+                    },
+                    label: {
+                        Image(systemName: "location.north.line.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                    }
+                )
+                .buttonStyle(.plain)
+                Button(
+                    action: {
+                        print("Clicked Button")
+                        
+                    },
+                    label: {
+                        Image(systemName: "map.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                    }
+                )
+                .buttonStyle(.plain)
+                Button(
+                    action: {
+                        print("Clicked Button")
+                        
+                    },
+                    label: {
+                        Image(systemName: "steeringwheel").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                    }
+                )
+                .buttonStyle(.plain)
             }
             .font(.system(size: 15, weight: .bold))
             .frame(maxWidth: .infinity, alignment: .trailing)
