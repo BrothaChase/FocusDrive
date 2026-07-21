@@ -43,7 +43,9 @@ struct ContentView: View {
                 Image(systemName: "car.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
                 Image(systemName: "rectangle.landscape.rotate").padding(10).background(.ultraThinMaterial).clipShape(Circle())
             }
+            .font(.system(size: 15, weight: .bold))
             .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(10)
             
            
            
@@ -54,8 +56,9 @@ struct ContentView: View {
                 Image(systemName: "steeringwheel").padding(10).background(.ultraThinMaterial).clipShape(Circle())
                
             }
+            .font(.system(size: 15, weight: .bold))
             .frame(maxWidth: .infinity, alignment: .trailing)
-          .padding()
+          .padding(10)
           
         }
         
