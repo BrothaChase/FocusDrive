@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var progress: Double = 0.0
     @State var carLatitude: Double = 37.7759
     @State var carLongitude: Double = -122.4192
+    @State private var isPaused = false
    
     // add camera position
     @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion(
@@ -39,9 +40,38 @@ struct ContentView: View {
               
             }
             VStack {
-                Image(systemName: "pause.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                Image(systemName: "car.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
-                Image(systemName: "rectangle.landscape.rotate").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                Button(
+                    action: {
+                        print("Clicked Button")
+                        
+                    },
+                    label: {
+                        Image(systemName: "pause.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                    }
+                )
+                .buttonStyle(.plain)
+                
+                Button(
+                    action: {
+                        print("Clicked Button")
+                        
+                    },
+                    label: {
+                        Image(systemName: "car.fill").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                    }
+                )
+                .buttonStyle(.plain)
+                
+                Button(
+                    action: {
+                        print("Clicked Button")
+                        
+                    },
+                    label: {
+                        Image(systemName: "rectangle.landscape.rotate").padding(10).background(.ultraThinMaterial).clipShape(Circle())
+                    }
+                )
+                .buttonStyle(.plain)
             }
             .font(.system(size: 15, weight: .bold))
             .frame(maxWidth: .infinity, alignment: .leading)
