@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		2A27A7023008795F00107F7A /* FocusDrive.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FocusDrive.xcodeproj; sourceTree = "<group>"; };
+		2A6A9FD7300EDABF002D74F8 /* FocusDrive.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FocusDrive.xcodeproj; sourceTree = "<group>"; };
 		2A89BA28300854AB0038F605 /* FocusDrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusDrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ABFBD93300ED71E0062EE69 /* FocusDrive.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FocusDrive.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,6 +37,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2A6A9FD9300EDABF002D74F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2A89BA1F300854AB0038F605 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				2A27A7023008795F00107F7A /* FocusDrive.xcodeproj */,
+				2ABFBD93300ED71E0062EE69 /* FocusDrive.xcodeproj */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -124,6 +133,10 @@
 				{
 					ProductGroup = 2ABFBD95300ED71E0062EE69 /* Products */;
 					ProjectRef = 2ABFBD93300ED71E0062EE69 /* FocusDrive.xcodeproj */;
+				},
+				{
+					ProductGroup = 2A6A9FD9300EDABF002D74F8 /* Products */;
+					ProjectRef = 2A6A9FD7300EDABF002D74F8 /* FocusDrive.xcodeproj */;
 				},
 			);
 			projectRoot = "";

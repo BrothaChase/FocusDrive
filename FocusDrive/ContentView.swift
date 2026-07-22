@@ -30,6 +30,7 @@ struct ContentView: View {
     @State var carLatitude: Double = 37.7759
     @State var carLongitude: Double = -122.4192
     @State private var isPaused = false
+    @StateObject private var routeManager = RouteManager()
    
     // add camera position
     @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion(
