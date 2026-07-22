@@ -14,6 +14,7 @@ class RouteManager: ObservableObject {
     @Published var startPoint: CLLocationCoordinate2D?
     @Published var endPoint: CLLocationCoordinate2D?
     @Published var totalDistance: Double = 0.0
+    @Published var mi: Double = 0.0
     
     
     func calculateRoute(startPoint: CLLocationCoordinate2D,endPoint: CLLocationCoordinate2D) {
@@ -23,7 +24,11 @@ class RouteManager: ObservableObject {
        let distance = startLocation.distance(from: endLocation)
         
         totalDistance = distance
+        convertToMiles()
     }
     
+    func convertToMiles() {
+        mi = totalDistance / 1609.344
+    }
     
 }
