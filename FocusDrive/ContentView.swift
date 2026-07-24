@@ -30,17 +30,27 @@ struct ContentView: View {
     @State var carLatitude: Double = 37.7759
     @State var carLongitude: Double = -122.4192
     @State private var isPaused = false
-    @StateObject private var routeManager = RouteManager()
    
     // add camera position
     @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.7759, longitude: -122.4192),
         span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)))
     
+    @StateObject private var routeManager = RouteManager()
+    
 
     var body: some View {
+        
         ZStack {
             Map(position: $cameraPosition)
+            
+            VStack {
+                Spacer()
+                Text(" \(routeManager.mi) MI"  )
+                    .padding()
+                    .background(.ultraThinMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius:100))
+            }
             
           VStack {
               VStack {
@@ -49,16 +59,15 @@ struct ContentView: View {
                     Text("**Position**:\(carLatitude)")
                     Text("**Position**:\(carLongitude)")
                     Text("**Progress**: \(progress)")
-                     
               }
               .padding()
               .background(.ultraThinMaterial)
               .clipShape(RoundedRectangle(cornerRadius:100))
-             
-              Spacer() // push text towards top
+               Spacer() // push text towards top
+                 
               
             }
-            
+         
             // left buttons
             VStack {
                 MapIconButton(systemName: "pause.fill") {
